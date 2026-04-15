@@ -10,7 +10,7 @@ resources:
 images:
   - name: registry.144.91.77.245.sslip.io/hans-niemann
     newName: registry.144.91.77.245.sslip.io/hans-niemann
-    newTag: b9fa42db82068c0181ff72386d26498cce29e6de
+    newTag: 36c17d0aa4e7ccf48ff97bbaee0e96dfd8db1888
 
 commonLabels:
   app.kubernetes.io/name: hans-niemann
