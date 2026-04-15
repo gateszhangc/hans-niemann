@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+for arg in "$@"; do
+  if [[ "$arg" == @* ]]; then
+    exec /usr/bin/dig "$@"
+  fi
+done
+
+exec /usr/bin/dig "$@" @8.8.8.8
