@@ -6,6 +6,7 @@ metadata:
     acme.cert-manager.io/http01-edit-in-place: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
     cert-manager.io/issue-temporary-certificate: "true"
+    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
     nginx.ingress.kubernetes.io/use-port-in-redirects: "false"
 spec:
@@ -17,16 +18,6 @@ spec:
       secretName: hans-niemann-live-tls
   rules:
     - host: hans-niemann.lol
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: hans-niemann
-                port:
-                  number: 80
-    - host: www.hans-niemann.lol
       http:
         paths:
           - path: /

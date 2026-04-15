@@ -15,4 +15,3 @@ images:
 commonLabels:
   app.kubernetes.io/name: hans-niemann
   app.kubernetes.io/part-of: hans-niemann
-
