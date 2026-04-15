@@ -1,0 +1,13 @@
+[1/15] GitHub repo readiness
+
+[2/15] Cloudflare DNS gate
+[dns] using Cloudflare auth mode: token
+[dns] checking nameservers for hans-niemann.lol
+ERROR: unable to resolve CLOUDFLARE_ACCOUNT_ID (token may not list accounts); set CLOUDFLARE_ACCOUNT_ID or use CLOUDFLARE_AUTH_MODE=global with valid email/key
+Cloudflare API request failed
+  method: GET
+  url: https://api.cloudflare.com/client/v4/accounts?per_page=1&page=1
+  status: 403
+  body:
+{"success":false,"errors":[{"code":9103,"message":"Unknown X-Auth-Key or X-Auth-Email"}],"messages":[],"result":null}ERROR: unable to resolve CLOUDFLARE_ACCOUNT_ID (token may not list accounts); set CLOUDFLARE_ACCOUNT_ID or use CLOUDFLARE_AUTH_MODE=global with valid email/key
+ERROR: failed to resolve Cloudflare account for creating zone 'hans-niemann.lol'
