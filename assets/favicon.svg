@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" role="img" aria-labelledby="title">
+  <title id="title">Hans Niemann favicon</title>
+  <rect width="128" height="128" rx="28" fill="#111215"/>
+  <rect x="14" y="14" width="100" height="100" rx="18" fill="none" stroke="#F4EFE4" stroke-opacity=".18"/>
+  <path d="M14 64H114M64 14V114" stroke="#F4EFE4" stroke-opacity=".12"/>
+  <path d="M31 92V35H43V57H74V35H86V92H74V68H43V92Z" fill="#F4EFE4"/>
+  <path d="M73 35H85L104 61V92H92V65L73 39Z" fill="#A2182A"/>
+  <rect x="91" y="14" width="23" height="23" fill="#A2182A"/>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1200" viewBox="0 0 900 1200" role="img" aria-labelledby="title desc">
+  <title id="title">Abstract Hans Niemann fallback visual</title>
+  <desc id="desc">An abstract geometric portrait panel inspired by a cold chessboard aesthetic.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#15171c"/>
+      <stop offset="100%" stop-color="#262930"/>
+    </linearGradient>
+    <linearGradient id="face" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#efe7d6"/>
+      <stop offset="100%" stop-color="#b3bac3"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="1200" rx="48" fill="url(#bg)"/>
+  <g opacity=".12" stroke="#F4EFE4">
+    <path d="M0 150H900M0 300H900M0 450H900M0 600H900M0 750H900M0 900H900M0 1050H900"/>
+    <path d="M150 0V1200M300 0V1200M450 0V1200M600 0V1200M750 0V1200"/>
+  </g>
+  <circle cx="630" cy="248" r="92" fill="#A2182A" opacity=".88"/>
+  <path d="M250 760L420 300H540L652 760Z" fill="url(#face)"/>
+  <path d="M210 868H688V985H210Z" fill="#0F1014"/>
+  <path d="M240 760C262 628 342 544 448 544C551 544 629 628 653 760Z" fill="#0F1014"/>
+  <path d="M360 462C390 422 425 404 468 404C514 404 552 427 581 468" fill="none" stroke="#0F1014" stroke-width="26" stroke-linecap="round"/>
+  <path d="M370 638C416 665 501 665 543 633" fill="none" stroke="#A2182A" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="405" cy="563" r="20" fill="#0F1014"/>
+  <circle cx="532" cy="563" r="20" fill="#0F1014"/>
+  <g fill="#F4EFE4" font-family="'Geist Mono','Courier New',monospace" letter-spacing="8">
+    <text x="68" y="96" font-size="36">HN / LOCAL FALLBACK</text>
+    <text x="68" y="1142" font-size="30">RATING 2728 / WORLD 20 / USA 5</text>
+  </g>
+</svg>

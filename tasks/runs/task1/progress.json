@@ -1,0 +1,83 @@
+{
+  "session_id": "hn-task1-static-site",
+  "created_at": "2026-04-15T09:00:00Z",
+  "updated_at": "2026-04-15T09:14:27Z",
+  "completed_batches": 4,
+  "total_batches": 4,
+  "skip_identifiers": [],
+  "exhausted_identifiers": [],
+  "batches": [
+    {
+      "id": "batch-0001-static-structure",
+      "status": "done",
+      "last_account": "marissaallen3716",
+      "last_error_type": "",
+      "last_error": "",
+      "attempts": [
+        {
+          "attempt": 1,
+          "account": "marissaallen3716",
+          "started_at": "2026-04-15T09:07:00Z",
+          "ended_at": "2026-04-15T09:08:53Z",
+          "classification": "complete",
+          "log_path": "tasks/runs/task1/logs/run-summary.md",
+          "completion": true
+        }
+      ]
+    },
+    {
+      "id": "batch-0002-brand-assets",
+      "status": "done",
+      "last_account": "marissaallen3716",
+      "last_error_type": "",
+      "last_error": "",
+      "attempts": [
+        {
+          "attempt": 1,
+          "account": "marissaallen3716",
+          "started_at": "2026-04-15T09:08:54Z",
+          "ended_at": "2026-04-15T09:09:20Z",
+          "classification": "complete",
+          "log_path": "tasks/runs/task1/logs/run-summary.md",
+          "completion": true
+        }
+      ]
+    },
+    {
+      "id": "batch-0003-integration",
+      "status": "done",
+      "last_account": "marissaallen3716",
+      "last_error_type": "",
+      "last_error": "",
+      "attempts": [
+        {
+          "attempt": 1,
+          "account": "marissaallen3716",
+          "started_at": "2026-04-15T09:09:21Z",
+          "ended_at": "2026-04-15T09:12:59Z",
+          "classification": "complete",
+          "log_path": "tasks/runs/task1/logs/run-summary.md",
+          "completion": true
+        }
+      ]
+    },
+    {
+      "id": "batch-0004-browser-tests",
+      "status": "done",
+      "last_account": "marissaallen3716",
+      "last_error_type": "",
+      "last_error": "",
+      "attempts": [
+        {
+          "attempt": 1,
+          "account": "marissaallen3716",
+          "started_at": "2026-04-15T09:13:00Z",
+          "ended_at": "2026-04-15T09:14:27Z",
+          "classification": "complete",
+          "log_path": "tasks/runs/task1/logs/run-summary.md",
+          "completion": true
+        }
+      ]
+    }
+  ]
+}

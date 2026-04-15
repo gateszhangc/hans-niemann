@@ -1,0 +1,48 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: hans-niemann
+  labels:
+    app.kubernetes.io/name: hans-niemann
+    app.kubernetes.io/part-of: hans-niemann
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: hans-niemann
+      app.kubernetes.io/part-of: hans-niemann
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: hans-niemann
+        app.kubernetes.io/part-of: hans-niemann
+    spec:
+      imagePullSecrets:
+        - name: dokploy-fleet-ghcr
+      containers:
+        - name: web
+          image: registry.144.91.77.245.sslip.io/hans-niemann:bootstrap
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 2
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /healthz
+              port: http
+            initialDelaySeconds: 5
+            periodSeconds: 20
+          resources:
+            requests:
+              cpu: 50m
+              memory: 64Mi
+            limits:
+              cpu: 250m
+              memory: 256Mi
+

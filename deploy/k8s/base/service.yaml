@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: hans-niemann
+  labels:
+    app.kubernetes.io/name: hans-niemann
+    app.kubernetes.io/part-of: hans-niemann
+spec:
+  type: ClusterIP
+  selector:
+    app.kubernetes.io/name: hans-niemann
+    app.kubernetes.io/part-of: hans-niemann
+  ports:
+    - name: http
+      port: 80
+      targetPort: http
+
