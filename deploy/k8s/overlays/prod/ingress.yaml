@@ -3,9 +3,11 @@ kind: Ingress
 metadata:
   name: hans-niemann
   annotations:
+    acme.cert-manager.io/http01-edit-in-place: "true"
     cert-manager.io/cluster-issuer: letsencrypt-prod
-    nginx.ingress.kubernetes.io/force-ssl-redirect: "true"
-    nginx.ingress.kubernetes.io/from-to-www-redirect: "true"
+    cert-manager.io/issue-temporary-certificate: "true"
+    nginx.ingress.kubernetes.io/ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/use-port-in-redirects: "false"
 spec:
   ingressClassName: nginx
   tls:
@@ -24,4 +26,13 @@ spec:
                 name: hans-niemann
                 port:
                   number: 80
-
+    - host: www.hans-niemann.lol
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: hans-niemann
+                port:
+                  number: 80
