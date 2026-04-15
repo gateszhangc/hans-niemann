@@ -9,3 +9,7 @@
 - DNS cutover: `hans-niemann.lol` and `www.hans-niemann.lol` now point to `144.91.73.228`, `144.91.77.245`, and `144.91.78.201`
 - TLS: `certificate/hans-niemann-live-tls` is `Ready=True`
 - Analytics: GA4 `G-7RWZY80MVL`, Clarity `wbzx6vuhvd`
+- GSC: `sc-domain:hans-niemann.lol` is `siteOwner`
+- GSC sitemap: `https://hans-niemann.lol/sitemap.xml` is submitted and listed
+- Live validation: `https://hans-niemann.lol` returns `200`, `https://www.hans-niemann.lol` returns `308 -> apex`
+- Browser validation: `PLAYWRIGHT_BASE_URL=https://hans-niemann.lol npm run test:e2e` passed
