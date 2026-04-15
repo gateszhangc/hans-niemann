@@ -1,5 +1,11 @@
 # Task 4 Run Summary
 
 - Session: `hn-task4-launch`
-- Active phase: `batch-0003-github-and-actions`
+- Final phase: `complete`
 - Deployment target: `gateszhangc/hans-niemann -> main -> registry.144.91.77.245.sslip.io/hans-niemann -> deploy/k8s/overlays/prod -> Argo CD application hans-niemann`
+- Local validation: `npm run build` and `npm run test:e2e` passed
+- Release automation: GitHub Actions `Build And Release` succeeded for `main`
+- Argo CD: application `hans-niemann` is `Synced` and `Healthy`
+- DNS cutover: `hans-niemann.lol` and `www.hans-niemann.lol` now point to `144.91.73.228`, `144.91.77.245`, and `144.91.78.201`
+- TLS: `certificate/hans-niemann-live-tls` is `Ready=True`
+- Analytics: GA4 `G-7RWZY80MVL`, Clarity `wbzx6vuhvd`

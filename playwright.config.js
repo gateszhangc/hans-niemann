@@ -1,22 +1,25 @@
 const { defineConfig, devices } = require("@playwright/test");
 
 const PORT = 43173;
+const liveBaseURL = process.env.PLAYWRIGHT_BASE_URL;
 
 module.exports = defineConfig({
   testDir: "./tests",
   timeout: 30_000,
   use: {
-    baseURL: `http://127.0.0.1:${PORT}`,
+    baseURL: liveBaseURL || `http://127.0.0.1:${PORT}`,
     trace: "on-first-retry",
     screenshot: "only-on-failure",
     video: "retain-on-failure"
   },
-  webServer: {
-    command: `python3 -m http.server ${PORT} --bind 127.0.0.1 --directory .`,
-    port: PORT,
-    reuseExistingServer: false,
-    timeout: 30_000
-  },
+  webServer: liveBaseURL
+    ? undefined
+    : {
+        command: `python3 -m http.server ${PORT} --bind 127.0.0.1 --directory .`,
+        port: PORT,
+        reuseExistingServer: false,
+        timeout: 30_000
+      },
   projects: [
     {
       name: "desktop-chrome",

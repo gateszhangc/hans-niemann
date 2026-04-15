@@ -40,6 +40,7 @@ export DNS_TARGET_APEX_IP="89.167.61.228"
 export DNS_TARGET_WWW="hans-niemann.lol"
 export CLOUDFLARE_PROXY_APEX="true"
 export CLOUDFLARE_PROXY_WWW="true"
+export K8S_LIVE_IPS="${K8S_LIVE_IPS:-144.91.73.228,144.91.77.245,144.91.78.201}"
 
 export GOOGLE_AUTH_MODE="${GOOGLE_AUTH_MODE:-adc_user_only}"
 export GOOGLE_REQUIRED_USER_EMAIL="${GOOGLE_REQUIRED_USER_EMAIL:-gateszhang92@gmail.com}"
@@ -63,3 +64,7 @@ bash "$WEBAPP_LAUNCH_ANALYTICS_SKILL_DIR/scripts/release-via-argo-and-verify.sh"
   main \
   hans-niemann \
   https://hans-niemann.lol
+
+# The shared Dokploy edge at 89.167.61.228 is not the public target for this Argo/K8s app.
+# Keep apex and www pointed directly at the ingress worker IPs after the release finishes.
+python3 scripts/sync_worker_dns.py hans-niemann.lol www.hans-niemann.lol
